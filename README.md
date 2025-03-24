@@ -59,7 +59,13 @@ pnpm server:build
 pnpm client:build
 ```
 
-### Build Both Client & Server
+### Build the @types/shared package
+
+```sh
+pnpm @types/shared:build
+```
+
+### Build Both Client & Server & @types/shared
 
 ```sh
 pnpm build
