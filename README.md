@@ -11,7 +11,7 @@ monorepo1/
 │   ├── server/  # Express backend
 │
 ├── packages/
-│   ├── shared/  # Shared utilities and components
+│   ├── shared-types/  # Common types for both client and server
 │
 ├── package.json  # Root configuration
 ├── pnpm-workspace.yaml  # pnpm workspace settings

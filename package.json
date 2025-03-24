@@ -10,7 +10,8 @@
     "start": "concurrently \"pnpm --filter=client run dev\" \"pnpm --filter=server run dev\"",
     "server:build": "pnpm -F server build",
     "client:build": "pnpm -F client build",
-    "build": "concurrently \"pnpm --filter=client run build\" \"pnpm --filter=server run build\"",
+    "@types/shared:build":"pnpm -F @types/shared build",
+    "build": "concurrently \"pnpm --filter=client run build\" \"pnpm --filter=server run build\" \"pnpm --filter=@types/shared run build\"",
     "lint": "eslint . --ext .ts,.tsx --fix"
   },
   "author": "srinu",

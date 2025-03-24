@@ -135,7 +135,7 @@ importers:
         specifier: ^5.4.3
         version: 5.4.3(pg-query-stream@4.8.1(pg@8.14.1))
       '@types/shared':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../packages/shared-types
 
   packages/shared-types: {}

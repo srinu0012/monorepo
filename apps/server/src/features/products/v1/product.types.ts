@@ -7,6 +7,8 @@ export const productIdSchema = z.object({
     .transform(Number),
 });
 
+export type productIdSchemaType = z.infer<typeof productIdSchema>;
+
 export const limitAndSkipSchema = z.object({
   limit: z
     .string()
@@ -21,3 +23,5 @@ export const limitAndSkipSchema = z.object({
     .default("0")
     .transform(Number),
 });
+
+export type limitAndSkipSchemaType = z.infer<typeof limitAndSkipSchema>;
