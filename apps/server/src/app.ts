@@ -1,11 +1,11 @@
 import express from "express";
 import "express-async-errors";
-import productRoutes from "./features/products/v1/product.routes";
-import { notFoundHandler } from "./middlewares/not-found.middleware";
-import globalErrorHandler from "./middlewares/global-error.middleware";
+import productRoutes from "./features/products/v1/product.routes.js";
+import { notFoundHandler } from "./middlewares/not-found.middleware.js";
+import globalErrorHandler from "./middlewares/global-error.middleware.js";
 import bodyParser from "body-parser";
 import cors from "cors";
-import config from "./config/env";
+import config from "./config/env.js";
 
 export const app = express();
 

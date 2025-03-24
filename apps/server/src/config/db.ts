@@ -1,5 +1,5 @@
 import pgPromise from "pg-promise";
-import config from "./env";
+import config from "./env.js";
 
 const dbConfig = {
   host: config.db.host,

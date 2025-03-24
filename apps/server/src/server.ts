@@ -1,6 +1,6 @@
-import { app } from "./app";
-import config from "./config/env";
-import { testConnection } from "./config/db";
+import { app } from "./app.js";
+import config from "./config/env.js";
+import { testConnection } from "./config/db.js";
 
 app.listen(config.serverPort, config.serverHost, async () => {
   testConnection();

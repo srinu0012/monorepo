@@ -3,7 +3,7 @@ import {
   getProductByIdService,
   getProductsService,
 } from "./product.service.js";
-import httpStatusCodes from "http-status-codes";
+import { StatusCodes } from "http-status-codes";
 import { limitAndSkipSchema, productIdSchema } from "./product.types.js";
 import {
   productIdSchemaType,
@@ -13,7 +13,7 @@ import {
 export const getProductByIdHandler = async (req: Request, res: Response) => {
   const { id }: productIdSchemaType = productIdSchema.parse(req.params);
   const result = await getProductByIdService(id);
-  res.status(httpStatusCodes.OK).json(result);
+  res.status(StatusCodes.OK).json(result);
 };
 
 export const getProductsHandler = async (req: Request, res: Response) => {
@@ -21,5 +21,5 @@ export const getProductsHandler = async (req: Request, res: Response) => {
     req.query
   );
   const result = await getProductsService(limit, skip);
-  res.status(httpStatusCodes.OK).json(result);
+  res.status(StatusCodes.OK).json(result);
 };

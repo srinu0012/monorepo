@@ -4,15 +4,12 @@ import {
   getProductsCount,
   getProductsRepo,
 } from "./product.repo.js";
-import httpStatusCodes from "http-status-codes";
+import { StatusCodes } from "http-status-codes";
 
 export const getProductByIdService = async (id: number) => {
   const result = await getProductByIdRepo(id);
   if (!result)
-    throw new ApiError(
-      `Product with ${id} not found`,
-      httpStatusCodes.NOT_FOUND
-    );
+    throw new ApiError(`Product with ${id} not found`, StatusCodes.NOT_FOUND);
   return result;
 };
 

@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
-import ApiError from "../utils/api-error.handler";
-import httpStatusCodes from "http-status-codes";
+import ApiError from "../utils/api-error.handler.js";
+import { StatusCodes } from "http-status-codes";
 import { ZodError } from "zod";
 
 interface ErrorResponse {
@@ -18,7 +18,7 @@ const globalErrorHandler = (
   res: Response,
   _next: NextFunction
 ) => {
-  let statusCode = httpStatusCodes.INTERNAL_SERVER_ERROR;
+  let statusCode = StatusCodes.INTERNAL_SERVER_ERROR;
   let response: ErrorResponse = {
     success: false,
     statusCode,
@@ -41,7 +41,7 @@ const globalErrorHandler = (
   }
 
   if (err instanceof ZodError) {
-    statusCode = httpStatusCodes.BAD_REQUEST;
+    statusCode = StatusCodes.BAD_REQUEST;
     response = {
       success: false,
       statusCode,
