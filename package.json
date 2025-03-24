@@ -1,0 +1,37 @@
+{
+  "name": "monorepo1",
+  "version": "1.0.0",
+  "description": "A monorepo for pagination using Frontend(React - vite) and Backend (node - express)",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "client:start": "pnpm -F client dev",
+    "server:start": "pnpm -F server run dev",
+    "start": "concurrently \"pnpm --filter=client run dev\" \"pnpm --filter=server run dev\"",
+    "server:build": "pnpm -F server build",
+    "client:build": "pnpm -F client build",
+    "build": "concurrently \"pnpm --filter=client run build\" \"pnpm --filter=server run build\"",
+    "lint": "eslint . --ext .ts,.tsx --fix"
+  },
+  "author": "srinu",
+  "license": "ISC",
+  "packageManager": "pnpm@10.5.1",
+  "devDependencies": {
+    "@eslint/js": "^9.23.0",
+    "@typescript-eslint/eslint-plugin": "^8.27.0",
+    "@typescript-eslint/parser": "^8.27.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.2",
+    "eslint": "^9.22.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^7.2.1",
+    "nodemon": "^3.1.9",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "zod": "^3.24.2"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "@types/shared",
+  "version": "1.0.0",
+  "description": "sharing comman types for the applications",
+  "main": "./src/index.ts",
+  "scripts": {
+    "build": "tsc -b"
+  },
+  "keywords": [],
+  "author": "srinu",
+  "packageManager": "pnpm@10.5.1"
+}
