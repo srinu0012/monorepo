@@ -4,7 +4,7 @@ import httpStatusCodes from "http-status-codes";
 import { ZodError } from "zod";
 
 interface ErrorResponse {
-  success: false;
+  success: boolean;
   statusCode: number;
   error: {
     message: string;

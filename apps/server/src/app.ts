@@ -12,7 +12,7 @@ export const app = express();
 app.use(bodyParser.json());
 app.use(
   cors({
-    origin: config.nodeEnv == "development" ? "*" : "https:localhost//5170",
+    origin: config.nodeEnv == "development" ? "*" : "https:localhost//5500",
   })
 );
 
