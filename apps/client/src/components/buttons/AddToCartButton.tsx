@@ -14,7 +14,7 @@ const StyledAddToCartButton = styled(Button)(({ theme }) => ({
 const AddToCartButton = () => {
   return (
     <StyledAddToCartButton variant="contained">
-      Add to Cart
+      Add To Cart
     </StyledAddToCartButton>
   );
 };

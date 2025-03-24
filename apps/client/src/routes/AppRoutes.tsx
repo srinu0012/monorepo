@@ -1,9 +1,7 @@
 import { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 
-const ProductList = lazy(
-  () => import("../components/product-list/ProductList")
-);
+const HomePage = lazy(() => import("../pages/HomePage"));
 
 export default function AppRoutes() {
   return (
@@ -12,7 +10,7 @@ export default function AppRoutes() {
         path="/"
         element={
           <Suspense>
-            <ProductList />
+            <HomePage />
           </Suspense>
         }
       />
